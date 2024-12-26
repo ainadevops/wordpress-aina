@@ -1,0 +1,16 @@
+apiVersion: v1
+data:
+  wp-config.php: "<?php\ndefine( 'DB_NAME', 'wordpress' );\ndefine( 'DB_USER', 'root'
+    );\ndefine( 'DB_PASSWORD', 'password' );\ndefine( 'DB_HOST', 'mariadb' );\ndefine(
+    'DB_CHARSET', 'utf8' );\ndefine( 'DB_COLLATE', '' );\ndefine( 'AUTH_KEY',         'put
+    your unique phrase here' );\ndefine( 'SECURE_AUTH_KEY',  'put your unique phrase
+    here' );\ndefine( 'LOGGED_IN_KEY',    'put your unique phrase here' );\ndefine(
+    'NONCE_KEY',        'put your unique phrase here' );\ndefine( 'AUTH_SALT',        'put
+    your unique phrase here' );\ndefine( 'SECURE_AUTH_SALT', 'put your unique phrase
+    here' );\ndefine( 'LOGGED_IN_SALT',   'put your unique phrase here' );\ndefine(
+    'NONCE_SALT',       'put your unique phrase here' );\n\n$table_prefix = 'wp_';\n\ndefine(
+    'WP_DEBUG', false );\n\nif ( ! defined( 'ABSPATH' ) ) {\n\tdefine( 'ABSPATH',
+    __DIR__ . '/' );\n}\n\nrequire_once ABSPATH . 'wp-settings.php';\n"
+kind: ConfigMap
+metadata:
+  name: wp-config-php
