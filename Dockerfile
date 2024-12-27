@@ -18,7 +18,6 @@ FROM docker.io/redhat/ubi9:latest
                unzip \
            && yum clean all
 
-
 # Nerladdning, uppackning och installation av WordPress
 # RUN wget https://wordpress.org/latest.zip -O /tmp/wordpress.zip && unzip /tmp/wordpress.zip -d /var/www/html && rm /tmp/wordpress.zip
 #
